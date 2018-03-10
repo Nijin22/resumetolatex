@@ -2,6 +2,10 @@
 
 A small python program to create multiple-language LaTeX documents (like resumes) from a single XML file.
 
+## Prerequisites
+* python3
+* lxml (`pip install lxml`)
+
 ## Usage
 
 * Create a (or modify the attached) `template_LANG.tex` file. Where `LANG` is the two-letter language code (e.g. `en` for English, `de` for German, ...). Use the [Cheetah3 template engine syntax](http://cheetahtemplate.org/users_guide/intro.html#give-me-an-example).
