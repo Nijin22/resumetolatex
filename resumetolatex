@@ -1,0 +1,17 @@
+#!/usr/bin/env python3
+
+from Cheetah.Template import Template
+
+# Read template file
+templateFile = open('./template.tex', 'r')
+templateString = templateFile.read()
+templateFile.close()
+
+# Read data
+# TODO
+resumeData = [{'test' : 'test123'}];
+
+# Fill template
+filled = Template(templateString, resumeData)
+
+print(filled)
