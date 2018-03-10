@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <resume>
   <header>
-    <fullname>Dennis Weber</fullname>
+    <firstname>Dennis</firstname>
+    <familyname>Weber</familyname>
     <address>
       <line1>Kreuzinger Str. 52</line1>
       <line2></line2>
@@ -9,11 +10,8 @@
       <line4 lang="en">Germany</line4>
     </address>
     <phone>+49 1523 8498 453</phone>
-    <email>TODO:EMAIL</email>
-    <website>
-      <displayText>TODO</displayText>
-      <linkedUrl>http://localhost</linkedUrl>
-    </website>
+    <email>dennis.weber123@gmail.com</email>
+    <website>www.nijin.org</website>
     <image>./picture.jpg</image>
   </header>
   <personalData>
@@ -45,7 +43,7 @@
       </organisation>
       <title lang="de">Werkstudent IT (Produktionslogistik)</title>
       <title lang="en">Production Logistics IT (part-time during university)</title>
-      <detail lang="de">Softwarenentwicklung für SAP Entwicklung mit ABAP</detail>
+      <detail lang="de">Softwarenentwicklung für SAP mit ABAP</detail>
       <detail lang="en">Software development for SAP with ABAP</detail>
     </entry>
     <entry>
@@ -150,8 +148,10 @@
     <language>
       <name lang="de">Englisch</name>
       <name lang="en">English</name>
-      <level lang="de">Verhandlungssicher (1 Jahr in den USA)</level>
-      <level lang="en">Fluent (1 year experience in the United States)</level>
+      <level lang="de">Verhandlungssicher</level>
+      <level lang="en">Fluent</level>
+      <comment lang="de">1 Semester in den USA</comment>
+      <comment lang="en">1 semester in the United States</comment>
     </language>
     <language>
       <name lang="de">Französisch</name>
@@ -163,13 +163,13 @@
   <projects>
     <project>
       <name>LibreToDo</name>
-      <description lang="de">Freies Selbstorganisations-Tool - Node.js, HTML, Javascript, Angular - github.com/nijin22/libretodo-web</description>
-      <description lang="en">Free self-organisation tool - Node.js, HTML, Javascript, Angular - github.com/nijin22/libretodo-web</description>
+      <description lang="de">Freies Selbstorganisations-Tool -- Node.js, HTML, Javascript, Angular -- github.com/nijin22/libretodo-web</description>
+      <description lang="en">Free self-organisation tool -- Node.js, HTML, Javascript, Angular -- github.com/nijin22/libretodo-web</description>
     </project>
   </projects>
   <skillGroups>
     <skillGroup>
-      <name lang="de">Programmiersprachen</name>
+      <name lang="de">Sprachen</name>
       <name lang="en">Programming languages</name>
       <skills>
         <skill>
