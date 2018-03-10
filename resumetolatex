@@ -1,26 +1,42 @@
 #!/usr/bin/env python3
-
 from Cheetah.Template import Template
-
+import sys
 
 # Static configuration
-TEMPLATE_NAME = './template.tex'
-FILLED_NAME = './filledTemplate.tex'
+TEMPLATE_NAME_PRE = './template_'
+TEMPLATE_NAME_POST = '.tex'
+FILLED_NAME_PRE = './filledTemplate_'
+FILLED_NAME_POST = '.tex'
 
-# Read template file
-templateFile = open(TEMPLATE_NAME, 'r')
-templateString = templateFile.read()
-templateFile.close()
 
-# Read data
-# TODO
-resumeData = [{'test' : 'test123'}];
+for lang in sys.argv:
+    if 'resumetolatex' in lang:
+        # User called the program as 'python resumetolatex' - so the first parameter
+        # is this programs name (instead of a language)
+        # ==> Just skip this iteration
+        continue
+    print ('Creating documents for language: ' + lang)
 
-# Fill template
-template = Template(templateString, resumeData)
-filledText = str(template)
+    # Read template file
+    filename =  TEMPLATE_NAME_PRE + lang + TEMPLATE_NAME_POST
+    templateFile = open(filename, 'r')
+    templateString = templateFile.read()
+    templateFile.close()
 
-# Write filled template
-filledFile = open(FILLED_NAME, 'w')
-filledFile.write(filledText)
-filledFile.close()
+    # Read data
+    # TODO
+    resumeData = [{'test' : 'test123'}];
+
+    # Fill template
+    template = Template(templateString, resumeData)
+    filledText = str(template)
+
+    # Write filled template
+    filename =  FILLED_NAME_PRE + lang + FILLED_NAME_POST
+    filledFile = open(filename, 'w')
+    filledFile.write(filledText)
+    filledFile.close()
+
+    print("  " + lang + " done.")
+
+print("all done.")
