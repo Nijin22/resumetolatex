@@ -10,6 +10,14 @@ FILLED_NAME_PRE = './filledTemplate_'
 FILLED_NAME_POST = '.tex'
 XML_FILENAME = './resume_data.xml'
 
+def replaceCharactersInChildren(object):
+    for child in object.getchildren():
+        if child.text is not None and "&" in child.text:
+            object[child.tag] = child.text.replace("&", "\\&");
+        else:
+            replaceCharactersInChildren(child) # recursively call the function for all objects
+    return object;
+
 for lang in sys.argv:
     if 'resumetolatex' in lang:
         # User called the program as 'python resumetolatex' - so the first parameter
@@ -35,8 +43,11 @@ for lang in sys.argv:
         parent = wrongNode.getparent()
         parent.remove(wrongNode)
 
-    # Fill template
+    # Generate python objects from XML
     xmlData = xml.getroot()
+    xmlData = replaceCharactersInChildren(xmlData) # fix ampersands
+
+    # Fill template
     template = Template(templateString, xmlData)
     filledText = str(template)
 
