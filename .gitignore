@@ -1,2 +1,5 @@
-# Latex build
-/build/
+# Filled template (default name)
+filledTemplate.tex
+
+# Created documents
+*.pdf

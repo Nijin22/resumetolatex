@@ -2,8 +2,13 @@
 
 from Cheetah.Template import Template
 
+
+# Static configuration
+TEMPLATE_NAME = './template.tex'
+FILLED_NAME = './filledTemplate.tex'
+
 # Read template file
-templateFile = open('./template.tex', 'r')
+templateFile = open(TEMPLATE_NAME, 'r')
 templateString = templateFile.read()
 templateFile.close()
 
@@ -12,6 +17,10 @@ templateFile.close()
 resumeData = [{'test' : 'test123'}];
 
 # Fill template
-filled = Template(templateString, resumeData)
+template = Template(templateString, resumeData)
+filledText = str(template)
 
-print(filled)
+# Write filled template
+filledFile = open(FILLED_NAME, 'w')
+filledFile.write(filledText)
+filledFile.close()
