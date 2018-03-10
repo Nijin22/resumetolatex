@@ -28,7 +28,7 @@ for lang in sys.argv:
 
     # Read template file
     filename =  TEMPLATE_NAME_PRE + lang + TEMPLATE_NAME_POST
-    templateFile = open(filename, 'r')
+    templateFile = open(filename, 'r', encoding="utf-8")
     templateString = templateFile.read()
     templateFile.close()
 
@@ -53,7 +53,7 @@ for lang in sys.argv:
 
     # Write filled template
     filename =  FILLED_NAME_PRE + lang + FILLED_NAME_POST
-    filledFile = open(filename, 'w')
+    filledFile = open(filename, 'w', encoding="utf-8")
     filledFile.write(filledText)
     filledFile.close()
 
