@@ -3,3 +3,6 @@ filledTemplate.tex
 
 # Created documents
 *.pdf
+
+# Config file (might contain credentials! But DO upload the .config.example file)
+config.php
